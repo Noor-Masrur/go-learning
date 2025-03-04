@@ -2,18 +2,15 @@ package main
 
 func main() {
 	cards := newDeck()
+	cards.print()
 
-	// cards.print()
+	hand, remainingCards := deal(cards, 5)
 
-	// first, second := deal(cards, 5)
+	hand.print()
+	remainingCards.print()
 
-	// first.print()
-	// println("----")
-	// second.print()
+	cards.writeToFile("my_cards")
 
-	cards.writeToFile("deck.txt")
-
-	newDeck := newDeckFromFile("deck.txt")
-
-	newDeck.print()
+	newCards := newDeckFromFile("my_cards")
+	newCards.print()
 }
