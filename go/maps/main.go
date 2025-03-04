@@ -18,6 +18,10 @@ func main() {
 	colors["white"] = "#ffffff"
 	fmt.Println(colors)
 	printMap(colors)
+
+	delete(colors, "white")
+	fmt.Println(colors)
+	printMap(colors)
 }
 
 func printMap(c map[string]string) {
